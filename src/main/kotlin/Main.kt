@@ -1,5 +1,6 @@
 import example.myapp.Aquarium
 
+// Primary constructor call
 fun buildAquarium() {
     val myAquarium = Aquarium()
     myAquarium.printSize()
@@ -8,6 +9,8 @@ fun buildAquarium() {
     myAquarium1.printSize()
 }
 
+// Method initialization for main()
+//  Entry point of the program
 fun main() {
     buildAquarium()
 }
