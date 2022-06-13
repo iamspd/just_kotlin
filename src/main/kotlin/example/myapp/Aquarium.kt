@@ -9,9 +9,12 @@ class Aquarium(var width: Int = 20, var height: Int = 40, var length: Int = 100)
     init {
         println("Aquarium initializing");
     }
-    init {
-        println("volume: ${(width * height * length) / 1000} l")
-    }
+
+    // Property volume that defines the use of
+    //  getter method
+    
+    val volume: Int
+        get() = (width * height * length) / 1000
 
     // Initializing second constructor which is called after
     //  primary constructor is executed {this()}
@@ -21,8 +24,8 @@ class Aquarium(var width: Int = 20, var height: Int = 40, var length: Int = 100)
         height = (tank / (width * length)).toInt()
     }
     fun printSize() {
-        println(
-            "Width: $width Height: $height Length: $length",
-        )
+        println("Width: $width Height: $height Length: $length")
+
+        println("Volume : $volume l")
     }
 }
