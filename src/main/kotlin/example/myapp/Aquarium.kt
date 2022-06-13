@@ -11,10 +11,15 @@ class Aquarium(var width: Int = 20, var height: Int = 40, var length: Int = 100)
     }
 
     // Property volume that defines the use of
-    //  getter method
-    
-    val volume: Int
+    //  getter and setter method
+    //  getter calculates the volume
+    //  setter calculates the height based on given value
+
+    var volume: Int
         get() = (width * height * length) / 1000
+        set(value) {
+            height = (value * 1000) / (width * length)
+        }
 
     // Initializing second constructor which is called after
     //  primary constructor is executed {this()}
